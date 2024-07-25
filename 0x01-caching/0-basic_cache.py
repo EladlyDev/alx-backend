@@ -15,3 +15,9 @@ class BasicCache(BaseCaching):
         """
         if (key and item):
             self.cache_data.update({key: item})
+
+    def get(self, key):
+        """
+        Retrieves the item from the cache with the specified key.
+        """
+        return self.cache_data.get(key, None)
